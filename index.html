@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PERSONALITY TYPE</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+</head>
+<body>
+    <!-- <h1>hello</h1> -->
+    <Section>
+        <h1>WHAT DOES YOUR NAME SAY ABOUT YOUR PERSONALITY?</h1>
+        <div class="centerDiv">
+            <div class="details">
+                <label for="">ENTER YOUR NAME </label>
+                <br>
+                <input type="text" name="" id="nameid">
+            </div>
+
+            <div class="imgdiv">
+                <!-- <img src="./cool-background.png" alt="" width="200" height="200" id="imgchange"> -->
+                <img src="https://source.unsplash.com/200x200?welcome,hello" alt="" width="200" height="200"
+                    id="imgchange">
+            </div>
+
+            <button>Click me</button>
+        </div>
+    </Section>
+
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <img src="./cool-background.png" class= "background"alt=""> -->
+    <!-- <canvas class="background"> </canvas> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"></script> -->
+
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                const name = $("#nameid").val();
+                alert(name);
+
+                $('#imgchange').attr('src', `https://joeschmoe.io/api/v1/${name}`);
+
+            });
+        });
+    </script>
+
+
+</body>
+<script>
+
+    /*var particles = Particles.init({
+        selector: '.background',
+        color: ['#DA0463', '#404B69', '#DBEDF3'],
+        // color: ['#00f0f0', '#00f000', '#000000'],
+        connectParticles: true
+    });
+
+    window.onload = function () {
+        Particles.init({
+            selector: ".background",
+            maxParticles: 400,
+        })
+    } */
+
+    /*window.onload = function () {
+        Particles.init({
+            selector: ".background",
+            maxParticles: 450,
+
+            // options for breakpoints
+            responsive: [
+                {
+                    breakpoint: 768,
+                    options: {
+                        maxParticles: 200,
+                        // color: '#48F2E3',
+                        connectParticles: false
+                    }
+                },
+                {
+                    breakpoint:425,
+                    options: {maxParticles:100,
+                        connectParticles:true}
+                }
+                // , 
+                // {
+                    // breakpoint:320,
+                    // options: {maxParticles:0
+                        // disables particles.js
+                    // }
+                // }
+            ]
+        });
+        
+    };*/
+</script>
+
+</html>
